@@ -17,6 +17,10 @@ import dj_database_url
 
 from django.core.wsgi import get_wsgi_application
 
+os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'django_project.settings')
+
+application = get_wsgi_application()
+
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
@@ -31,7 +35,7 @@ SECRET_KEY = 'dnmk2o-d!0vmmekua@(i(t_1oix2x2)ws!5u_y0kihznz89(8q'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['young-lowlands-87313.herokuapp.com','']
+ALLOWED_HOSTS = ['young-lowlands-87313.herokuapp.com']
 
 
 # Application definition
